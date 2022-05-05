@@ -60,40 +60,49 @@ public class Main {
                     """);
         }
 
-        public void beregn(){
-        Scanner sc = new Scanner(System.in);
+        public void beregn() {
+            Scanner sc = new Scanner(System.in);
             System.out.print("Indtast varens pris: ");
-        double varePris = sc.nextDouble();
+            double varePris = sc.nextDouble();
 
             System.out.print("Indtast antal varer: ");
-        int vareAntal = sc.nextInt();
+            int vareAntal = sc.nextInt();
 
-            System.out.print("Indtast din nuværende stat: ");
-        String vareStat = sc.nextLine().toUpperCase();
+            System.out.println();
 
-            double statSkat;
+            boolean validAnswer;
+            String vareStat;
+            double statSkat = 0;
+            do {
 
-        switch(vareStat){
-                case "UT" :
-                    statSkat = 6.68;
-                    break;
-                case "NV":
-                    statSkat = 8;
-                    break;
-                case "TX":
-                    statSkat = 6.25;
-                    break;
-                case "AL":
-                    statSkat = 4;
-                    break;
-                case "CA":
-                    statSkat = 8.25;
-                    break;
-                default:
-                    System.out.println("Venligst indtast en stat som findes på listen.");
+                System.out.print("Indtast din nuværende stat: ");
+                vareStat = sc.next().toUpperCase();
 
+                validAnswer = false;
 
-            }
+                switch (vareStat) {
+                    case "UT":
+                        statSkat = 6.68;
+                        break;
+                    case "NV":
+                        statSkat = 8;
+                        break;
+                    case "TX":
+                        statSkat = 6.25;
+                        break;
+                    case "AL":
+                        statSkat = 4;
+                        break;
+                    case "CA":
+                        statSkat = 8.25;
+                        break;
+                    default:
+                        System.out.println("Venligst indtast en stat som findes på listen.");
+                        validAnswer = true;
+                        break;
+                }
+            } while (validAnswer);
+
 
 
         }
