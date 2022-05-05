@@ -63,6 +63,12 @@ public class Main {
         Scanner sc = new Scanner(System.in);
             System.out.print("Indtast varens pris: ");
         double varePris = sc.nextDouble();
+
+            System.out.println("Indtast antal varer: ");
+        int vareAntal = sc.nextInt();
+
+
+
         }
 
 
