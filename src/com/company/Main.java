@@ -103,7 +103,21 @@ public class Main {
                 }
             } while (validAnswer);
 
+            double vareTotal = varePris * vareAntal;
 
+            if ( vareTotal >= 50000){
+                System.out.println("Din ordre på $" + vareTotal + " har givet dig 15%!");
+            } else if (vareTotal >= 10000){
+                System.out.println("Din ordre på $" + vareTotal + " har givet dig 10%!");
+            } else if (vareTotal >= 7000){
+                System.out.println("Din ordre på $" + vareTotal + " har givet dig 7%!");
+            } else if (vareTotal >= 5000){
+                System.out.println("Din ordre på $" + vareTotal + " har givet dig 5%!");
+            } else if (vareTotal <= 1000){
+                System.out.println("Din ordre på $" + vareTotal + " har givet dig 3%!");
+            } else {
+                System.out.println("Din ordre på $" + vareTotal + " Ingen discount!");
+            }
 
         }
 
