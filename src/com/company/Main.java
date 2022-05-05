@@ -33,6 +33,9 @@ public class Main {
            // case "3" -> printTax();
            // default -> System.out.println("Venligst indtast et tal som er validt.");
         }
+
+
+
     }
 
     public static void main(String[] args) {
