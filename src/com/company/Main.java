@@ -1,6 +1,7 @@
 package com.company;
 
 import java.sql.SQLOutput;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -64,9 +65,35 @@ public class Main {
             System.out.print("Indtast varens pris: ");
         double varePris = sc.nextDouble();
 
-            System.out.println("Indtast antal varer: ");
+            System.out.print("Indtast antal varer: ");
         int vareAntal = sc.nextInt();
 
+            System.out.print("Indtast din nuværende stat: ");
+        String vareStat = sc.nextLine().toUpperCase();
+
+            double statSkat;
+
+        switch(vareStat){
+                case "UT" :
+                    statSkat = 6.68;
+                    break;
+                case "NV":
+                    statSkat = 8;
+                    break;
+                case "TX":
+                    statSkat = 6.25;
+                    break;
+                case "AL":
+                    statSkat = 4;
+                    break;
+                case "CA":
+                    statSkat = 8.25;
+                    break;
+                default:
+                    System.out.println("Venligst indtast en stat som findes på listen.");
+
+
+            }
 
 
         }
