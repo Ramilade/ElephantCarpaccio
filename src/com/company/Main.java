@@ -30,7 +30,7 @@ public class Main {
         switch (choice) {
             // case "1" -> beregn();
             case "2" -> printRabat();
-            // case "3" -> printTax();
+            case "3" -> printTax();
             // default -> System.out.println("Venligst indtast et tal som er validt.");
         }
     }
@@ -43,6 +43,17 @@ public class Main {
                     $7,000	        7%
                     $10,000	        10%
                     $50,000	        15%
+                    """);
+        }
+
+        public void printTax(){
+            System.out.println("""
+                    Stat	    Skat mængde
+                    UT	        6.85%
+                    NV	        8.00%
+                    TX	        6.25%
+                    AL	        4.00%
+                    CA	        8.25%
                     """);
         }
 
