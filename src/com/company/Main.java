@@ -13,26 +13,28 @@ public class Main {
     public void ui() {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("""
-                                
-                Velkommen til prisberegner 2022!! v 0.42.
-                                
-                Indtast venligst et nummer for at tage et valg.
-                                
-                1. Beregn pris af produkter.
-                2. Udskriv alle rabatter.
-                3. Udksriv alle skatter.
-                                
-                """);
+        do {
+            System.out.println("""
+                                    
+                    Velkommen til prisberegner 2022!! v 0.42.
+                                    
+                    Indtast venligst et nummer for at tage et valg.
+                                    
+                    1. Beregn pris af produkter.
+                    2. Udskriv alle rabatter.
+                    3. Udksriv alle skatter.
+                                    
+                    """);
 
-        String choice = sc.nextLine();
+            String choice = sc.nextLine();
 
-        switch (choice) {
-            // case "1" -> beregn();
-            case "2" -> printRabat();
-            case "3" -> printTax();
-            // default -> System.out.println("Venligst indtast et tal som er validt.");
-        }
+            switch (choice) {
+                case "1" -> beregn();
+                case "2" -> printRabat();
+                case "3" -> printTax();
+                // default -> System.out.println("Venligst indtast et tal som er validt.");
+            }
+        }while(true);
     }
 
         public void printRabat(){
@@ -55,6 +57,12 @@ public class Main {
                     AL	        4.00%
                     CA	        8.25%
                     """);
+        }
+
+        public void beregn(){
+        Scanner sc = new Scanner(System.in);
+            System.out.print("Indtast varens pris: ");
+        double varePris = sc.nextDouble();
         }
 
 
